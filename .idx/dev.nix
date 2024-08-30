@@ -17,26 +17,26 @@
       "golang.go"
     ];
     workspace = {
-      onCreate = {
-        # Open editors for the following files by default, if they exist:
-        default.openFiles = ["server.go"];
-      };
+      # onCreate = {
+      #   # Open editors for the following files by default, if they exist:
+      #   default.openFiles = ["server.go"];
+      # };
     };
     # Enable previews and customize configuration
-    previews = {
-      enable = true;
-      previews = {
-        web = {
-          command = [
-            "nodemon"
-            "--signal" "SIGHUP"
-            "-w" "."
-            "-e" "go,html"
-            "-x" "go run server.go -addr localhost:$PORT"
-          ];
-          manager = "web";
-        };
-      };
-    };
+    # previews = {
+    #   enable = true;
+    #   previews = {
+    #     web = {
+    #       command = [
+    #         "nodemon"
+    #         "--signal" "SIGHUP"
+    #         "-w" "."
+    #         "-e" "go,html"
+    #         "-x" "go run server.go -addr localhost:$PORT"
+    #       ];
+    #       manager = "web";
+    #     };
+    #   };
+    # };
   };
 }
